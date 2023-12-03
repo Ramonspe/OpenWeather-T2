@@ -13,10 +13,10 @@ axios
         if (cidade) {
         const {lat, lon} = cidade;
         console.log(`As coordenadas são Latitude: ${lat} e Longitude: ${lon}`);
-        const current_url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        const apiWeatherURL2 = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
         axios
-        .get(current_url)
+        .get(apiWeatherURL2)
         then(resWeather => {
             const temperatura = resWeather.data.main.feels_like;
             const descricao = resWeather.data.weather[0].description;
